@@ -1,7 +1,9 @@
 <%# ＜チャット画面＞読み込み確認用 %>
 <div class="header_chat">
  <div class="left_header">
-  <div class="header_title">hogehoge
+  <div class="header_title">
+  <%# hogehoge %>
+  <%= @room.name%>
   </div>
  </div>
  <div class="rihgt_header">
@@ -11,7 +13,8 @@
  </div>
 </div>
 <div class="messages">
- <div class="message_unit">
+ <%= render partial: 'message', collection: @messages %>
+ <%# <div class="message_unit">
   <div class="upper_message">
     <div class="name">Tom
     </div>
@@ -35,7 +38,7 @@
     <div class="message">goodbye
     </div>
   </div>
- </div>
+ </div> %>
 </div>
 <%# <div class="form"> %>
 <%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
