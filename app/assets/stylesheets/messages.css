@@ -129,13 +129,13 @@
   display: flex;
 }
 
-.text {
+.form-message {
   padding-left: 10px;
   height: 50px;
   border: none;
   width: 100%;
 }
-.send_btn {
+.form-submit {
   background-color: #38aef0;
   border: none;
   color: white;
